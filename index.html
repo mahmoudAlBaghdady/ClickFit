@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,7 +81,7 @@
         class="scrollspy-example"
         tabindex="0"
       >
-      <div id="load"></div>
+        <div id="load"></div>
         <!-- home -->
         <div class="row justify-content-center home mb-3" id="home">
           <div class="logo-box col-12">
@@ -368,13 +368,15 @@
             </p>
           </div>
           <div class="row mb-4 mx-auto mt-3">
-            <div class="col-lg-4 col-md-6 col-12 text-center my-3 ">
+            <div class="col-lg-4 col-md-6 col-12 text-center my-3">
               <div class="card">
                 <div class="card-header">
                   <h4>Free</h4>
                 </div>
                 <div class="card-body">
-                  <h1 class="my-0 font-weight-normal">$0 <small class="text-muted">/mo</small></h1>
+                  <h1 class="my-0 font-weight-normal">
+                    $0 <small class="text-muted">/mo</small>
+                  </h1>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li>lorem lorem lorem</li>
                     <li>lorem lorem lorem</li>
@@ -390,7 +392,9 @@
                   <h4>Pro</h4>
                 </div>
                 <div class="card-body">
-                  <h1 class="my-0 font-weight-normal">$15 <small class="text-muted">/mo</small></h1>
+                  <h1 class="my-0 font-weight-normal">
+                    $15 <small class="text-muted">/mo</small>
+                  </h1>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li>lorem lorem lorem</li>
                     <li>lorem lorem lorem</li>
@@ -400,13 +404,15 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-12 text-center my-3 ">
+            <div class="col-lg-4 col-md-12 col-12 text-center my-3">
               <div class="card">
                 <div class="card-header">
                   <h4>Ultimate</h4>
                 </div>
                 <div class="card-body">
-                  <h1 class="my-0 font-weight-normal">$30 <small class="text-muted">/mo</small></h1>
+                  <h1 class="my-0 font-weight-normal">
+                    $30 <small class="text-muted">/mo</small>
+                  </h1>
                   <ul class="list-unstyled mt-3 mb-4">
                     <li>lorem lorem lorem</li>
                     <li>lorem lorem lorem</li>
@@ -416,35 +422,49 @@
                 </div>
               </div>
             </div>
+            <div class="col-12 text-center my-3">
+              <div
+                class="card"
+                <div
+                class="row mb-0"
+                style="background-color: #deacf5"
+              >
+                <div class="card-header">
+                  <h4>DATA</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="fs-5 dataText"></h1>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-       
+
         <!-- container and scroll -->
       </div>
-      <div class="row mb-0 " style="background-color:#DEACF5;">
-        <div class="col-8 mx-auto text-center">
-          <h1 class="fs-5 dataText"> </h1>
-        </div>
-      </div>
+     
     </div>
-   
+
     <!-- container and scroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"
+    ></script>
     <script>
-      $(document).ready(function() {
-    $.ajax({
-        url:"http://numbersapi.com/1/30/date?json",
-        type: "Get",
-     
-        success: function(data) {
-            $(data).each(function(index, el) {
-              console.log(el)
-                $(".dataText").text(el.text);
+      $(document).ready(function () {
+        $.ajax({
+          url: "http://numbersapi.com/1/30/date?json",
+          type: "Get",
+
+          success: function (data) {
+            $(data).each(function (index, el) {
+              console.log(el);
+              $(".dataText").text(el.text);
             });
-        }
-    })
-})
+          },
+        });
+      });
       $(function () {
         $(document).scroll(function () {
           var $nav = $("#mainNavbar");
